@@ -1,0 +1,66 @@
+\documentclass[fleqn,a4paper,12pt,towside]{article}
+\usepackage[left=1cm,right=1.5cm,top=2cm]{geometry}
+\usepackage{xcolor}
+\title{{\huge Topology}}
+\author{\Large Raneem Madani\\Student number:11820975}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\vspace{1cm}
+\begin{document}
+\maketitle
+\begin{enumerate}
+    \item Prove that if $X$ is finite then the cofinite topology on $X=$discrete topology.\\
+    {\color{red}\underline{Solution:}} since every subset of $X$ is finite then their complement is also finite, so every subset of $X\in\mathfrak{F}\Rightarrow$ the finite topology is the discrete topology. \\
+    \noindent{\color{red}\rule{\linewidth}{.3mm}}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     \item Prove that the union of a finite number of closed sets is closed.\\
+    {\color{red}\underline{Solution:}} Let $F_1,F_2,F_3,...,F_n$ be closed$\Rightarrow~F_1^c,F_2^c,F_3^c,...,F_n^c$ are open and their was in $\mathfrak{F}$, that's mean $F_1^c\cap F_2^c \cap...\cap F_n^c$ is open in $\mathfrak{F}\Rightarrow~(F_1^c\cap F_2^c\cap...\cap F_n^c)^c=F_1\cup F_2\cup...\cup F_n$ is closed.\\
+    \noindent{\color{red}\rule{\linewidth}{.3mm}}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     \item Let $\mathfrak{F}$ be a topology on $X;~A,B\subset X$, Prove that:
+     \begin{itemize}
+         \item $A^\circ\cup B^\circ\subseteq(A\cup B)^\circ$\\
+             {\color{red}\underline{Solution:}}
+             $A\subseteq A\cup B\Rightarrow A^\circ\subseteq (A\cup B)^\circ$\\
+             $B\subseteq A\cup B\Rightarrow B^\circ\subseteq(A\cup B)^\circ$\\
+             $\therefore A^\circ\cup B^\circ \subseteq(A\cup B)^\circ$
+%---------------------------------------------------------------------
+         \item $A^\circ \cap B^\circ=(A\cap B)^\circ$\\
+             {\color{red}\underline{Solution:}}
+             $A\cap B\subseteq A\Rightarrow (A\cap B)^\circ\subseteq A^\circ$\\
+            $A\cap B\subseteq B\Rightarrow (A\cap B)^\circ\subseteq B^\circ$\\
+            $\therefore (A\cap B)^\circ\subseteq A^\circ\cap B^\circ$\\
+            Let $x\in A^\circ\cap B^\circ\Rightarrow x \in A^\circ~\&~B^\circ\\
+            \Rightarrow \exists u_x~nbd~of~x$ such that $u_x\subseteq A~\&~u_x\subseteq B\\
+            \Rightarrow u_x\subseteq A\cap B\Rightarrow x\in (A\cap B)^\circ$\\
+            $\therefore A^\circ\cap B^\circ\subseteq (A\cap B)^\circ$
+            
+%---------------------------------------------------------------------
+         \item Give an example where $(A\cup B)^\circ\neq A^\circ \cup B^\circ $\\
+             {\color{red}\underline{Solution:}} Let $A=\mathbb{Q}\Rightarrow A^\circ=\phi$\\
+             Let $B=\mathbb{Q}^c\Rightarrow B^\circ=\phi\Rightarrow A^\circ\cup B^\circ=\phi$\\
+             But $(A\cup B)^\circ=(\mathbb{R})^\circ=\mathbb{R}$\\
+            \noindent{\color{red}\rule{\linewidth}{.15mm}}
+%---------------------------------------------------------------------
+     \end{itemize}.
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     \item Prove that $\bar{A}=\cap\{F:~F$ is closed ,$A\subseteq F\}$\\
+    {\color{red}\underline{Solution:}}$\bar{A}$ is one of the closed sets containing $A$ so $\cap\{F:~F$ closed, $A\subseteq F\}\subseteq\bar{A}$. {\color{red}R.H.S$\subseteq$ L.H.S}\\
+    Since $A\subseteq F\Rightarrow\bar{A}\subseteq\bar{F}$ but $F$ is closed $\Rightarrow \bar{F}=F\Rightarrow\bar{A}\subseteq F\Rightarrow \bar{A}\subseteq\cap\{F:F~closed~A\subseteq F\}$. {\color{red}L.H.S$\subseteq$ R.H.S}
+    $$so~\bar{A}=\{F:F~closed~A\subseteq F\}$$
+    \noindent{\color{red}\rule{\linewidth}{.3mm}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     \item Let $\mathfrak{F}_1,\mathfrak{F}_2$ be two topology on $X$ prove that $\mathfrak{F}_1\cap \mathfrak{F}_2$ is a topology on $X$.\\
+    {\color{red}\underline{Solution:}}
+    \begin{itemize}
+        \item since $X,\phi\in\mathfrak{F}_1$ and $\mathfrak{F}_2\Rightarrow X,\phi\in \mathfrak{F}_1\cap\mathfrak{F}_2.$
+        \item Let $\mathfrak{F}=\mathfrak{F}_1\cap\mathfrak{F}_2$\\ 
+        if $A_1,A_2,A_3,...\in\mathfrak{F}\Rightarrow A_1,A_2,A_3,...\in\mathfrak{F}_1~and~A_1,A_2,A_3,...\in\mathfrak{F}_2\\ 
+        \Rightarrow A_1\cup A_2\cup A_3\cup... \in\mathfrak{F}_1~\&~\mathfrak{F}_2\Rightarrow A_1\cup A_2\cup A_3\cup...\in\mathfrak{F}.$ 
+        \item if $A_1,A_2,...,A_n\in\mathfrak{F}\Rightarrow A_1,A_2,...,A_n\in\mathfrak{F}_1~and~A_1,A_2,...,A_n\in\mathfrak{F}_2\\ 
+        \Rightarrow A_1\cap A_2\cap...\cap A_n \in\mathfrak{F}_1~\&~\mathfrak{F}_2\Rightarrow A_1\cap A_2\cap ...\cap A_n\in\mathfrak{F}.$ 
+        \end{itemize}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
